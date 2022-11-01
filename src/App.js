@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Month from "./components/Month";
 import Week from "./components/Week";
 
 export default function App() {
 
 
-  const [view, setView] = useState([<Month />, <Week />]);
+  const [view] = useState([<Month />, <Week />]);
   const [curView, setCurView] = useState(0);
 
 
