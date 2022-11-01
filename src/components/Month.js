@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CalendarEvent from "./CalendarEvent";
-import { List, Grid, Card, Table, TableBody, TableContainer, TableHead, TableRow, TableCell } from "@mui/material";
+import { Grid, Table, TableBody, TableContainer, TableHead, TableRow, TableCell } from "@mui/material";
 
 
 export default function Month() {
@@ -21,7 +21,7 @@ export default function Month() {
     }, []);
 
     const filteredEvents = events.filter((event) => (
-        event.row == 4
+        event.row === 4
     ));
 
 
@@ -45,13 +45,13 @@ export default function Month() {
         createData(3, '13', '14', '15', '16', '17', '18', '19'),
         createData(
             4, 
-            eventsList.filter((event) => (event.props.event.day == 'Sunday')),
-            eventsList.filter((event) => (event.props.event.day == 'Monday')), 
-            eventsList.filter((event) => (event.props.event.day == 'Tuesday')), 
-            eventsList.filter((event) => (event.props.event.day == 'Wednesday')), 
-            eventsList.filter((event) => (event.props.event.day == 'Thursday')), 
-            eventsList.filter((event) => (event.props.event.day == 'Friday')), 
-            eventsList.filter((event) => (event.props.event.day == 'Saturday'))
+            eventsList.filter((event) => (event.props.event.day === 'Sunday')),
+            eventsList.filter((event) => (event.props.event.day === 'Monday')), 
+            eventsList.filter((event) => (event.props.event.day === 'Tuesday')), 
+            eventsList.filter((event) => (event.props.event.day === 'Wednesday')), 
+            eventsList.filter((event) => (event.props.event.day === 'Thursday')), 
+            eventsList.filter((event) => (event.props.event.day === 'Friday')), 
+            eventsList.filter((event) => (event.props.event.day === 'Saturday'))
             ),
         createData(5, '27', '28', '29', '30', '', '', '')
     ];

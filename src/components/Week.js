@@ -22,11 +22,11 @@ export default function Week() {
 
     
     const filteredEvents = events.filter((event) => (
-        event.row == 4
+        event.row === 4
     ));
 
 
-    //create our inventory list
+    //create list of events
     const eventsList = filteredEvents.map((event) => (
         <CalendarEvent key={event.id} event={event} />
     ));
@@ -48,43 +48,43 @@ export default function Week() {
                 <Grid item xs={1}>
                     <p>Sunday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Sunday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Sunday'))}
                     </List>
                 </Grid>
                 <Grid item xs={1}>
                     <p>Monday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Monday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Monday'))}
                     </List>
                 </Grid>
                 <Grid item xs={1}>
                     <p>Tuesday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Tuesday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Tuesday'))}
                     </List>
                 </Grid>
                 <Grid item xs={1}>
                     <p>Wednesday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Wednesday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Wednesday'))}
                     </List>
                 </Grid>
                 <Grid item xs={1}>
                     <p>Thursday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Thursday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Thursday'))}
                     </List>
                 </Grid>
                 <Grid item xs={1}>
                     <p>Friday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Friday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Friday'))}
                     </List>
                 </Grid>
                 <Grid item xs={1}>
                     <p>Saturday</p>
                     <List>
-                        {eventsList.filter((event) => (event.props.event.day == 'Saturday'))}
+                        {eventsList.filter((event) => (event.props.event.day === 'Saturday'))}
                     </List>
                 </Grid>
 
