@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Month from "./components/Month";
+import Week from "./components/Week";
 
-function App() {
+export default function App() {
+
+
+  const [view, setView] = useState([<Month />, <Week />]);
+  const [curView, setCurView] = useState(0);
+
+
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+
+      <a href="https://www.w3schools.com" target="_blank">View source on GitHub</a>
+
+
+      <div>
+
+        <button onClick={() => {
+          setCurView(0);
+        }}
         >
-          Learn React
-        </a>
-      </header>
+          Month View
+        </button>
+
+        <button onClick={() => {
+          setCurView(1);
+        }}
+        >
+          Week View
+        </button>
+      </div>
+      {view[curView]}
     </div>
   );
-}
 
-export default App;
+
+
+
+
+
+}
