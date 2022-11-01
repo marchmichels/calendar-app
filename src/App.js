@@ -18,7 +18,7 @@ export default function App() {
   return (
     <div>
 
-      <a href="https://github.com/marchmichels/calendar-app" target="_blank">View source on GitHub</a>
+      <a href="https://github.com/marchmichels/calendar-app" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
 
 
       <div>
